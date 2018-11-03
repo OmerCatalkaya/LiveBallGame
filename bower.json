@@ -1,0 +1,11 @@
+{
+  "name": "liveballgame",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/OmerCatalkaya/LiveBallGame",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "semantic": "^2.4.1"
+  }
+}
