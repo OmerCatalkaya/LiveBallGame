@@ -1,0 +1,26 @@
+
+
+1> github deposu oluşturulur.
+
+2> github'da oluşturulan depo vscode'a indirilir ve ilk commit yapılır.
+    > git clone "https://github.com/OmerCatalkaya/LiveBallGame.git" 
+    > git add .
+    > git commit -m "ilk commit"
+    > git push origin master
+
+3> express kurulumu yapılır. ( http://expressjs.com/ )
+
+    > npm install express --save
+    > npm install express-generator -g
+    > express --view=pug myapp 
+        yada
+        > express --view=pug myapp
+    > npm install
+    > npm install nodemon
+    > package.json'da yapılacak değişiklikler
+        "scripts": {
+            "start": "nodemon ./bin/www"
+        },
+    > git add .
+    > git commit -m "ilk commit"
+    > git push origin master
