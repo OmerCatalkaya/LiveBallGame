@@ -45,7 +45,7 @@
   block javascript
     script(src="/angular/angular.min.js")
 
-9> bower aracılığı ile semantic ui kurulumu yapılır ve semantic.min.css link ayarı yapılır.
+9> bower aracılığı ile semantic ui kurulumu yapılır ve layout.pug da semantic.min.css link ayarı yapılır.
     > bower install semantic --save
     
     link(rel='stylesheet', href=/semantic/dist/semantic.min.css')
@@ -68,5 +68,36 @@
         script(src="/javascripts/main.js")
         script(src="/javascripts/indexController.js")
 
-11>
+11> socket.io peketi projeye dahil edilir.
+    > npm install socket.io --save
 
+12> src adında bir klasör oluşturulur ve socketApi.js dosyası oluşturulur.
+
+    const socketio = require("socket.io");
+    const io = socketio();
+    const socketApi = {};
+
+    socketApi.io = io;
+
+    io.on("connection", (socket) => {
+        console.log("a user connected...");
+    });
+
+    module.exports =socketApi;
+
+13> bin/www dosyasına gerekli code lar yazılarak socket.io server da aktif olarak çalışması sağlanır.
+    /**
+    * socketio
+    */
+
+    const socketApi = require("../src/socketApi.js");
+    const io = socketApi.io;
+    io.attach(server);
+
+14> layout.pug dosyasına socket.io.js dosyası eklenir.
+    block javascript
+      script(src="/socket.io/socket.io.js")
+
+15> AngularJS indexFactory servisi yazılır.
+
+16> 
