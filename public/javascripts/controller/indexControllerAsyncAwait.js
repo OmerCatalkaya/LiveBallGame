@@ -46,7 +46,7 @@ app.controller("indexController", [
         reconnectionAttempts: 3,
         reconnectionDelay: 600
       };
-
+ 
       try {
         const socket = await indexFactory.connectSocket(
           "http://localhost:3000",
